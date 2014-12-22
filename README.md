@@ -4,10 +4,10 @@ MySQL-JSON-utils
 Some functions for JSON parsing for SQL queries
 
 ## Install
-$ mysql -u <user> -p <database> < install.sql
+$ mysql -u "user" -p "database" < install.sql
 
 ## Uninstall
-$ mysql -u <user> -p <database> < uninstall.sql
+$ mysql -u "user" -p "database" < uninstall.sql
 
 ## Descriptions
 
