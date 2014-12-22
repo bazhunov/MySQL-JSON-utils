@@ -29,15 +29,14 @@ mysql> SELECT JSON_VALUE(payload, 'roundTripAverage') from history where link_id
 
 Get JSON ARRAY Value:
 ```
-mysql> select JSON_VALUE('{"averageCpuLoad": 1.6, "xxx": 23}', 'averageCpuLoad');
-+--------------------------------------------------------------------+
-| JSON_VALUE('{"averageCpuLoad": 1.6, "xxx": 23}', 'averageCpuLoad') |
-+--------------------------------------------------------------------+
-| 1.6                                                                |
-+--------------------------------------------------------------------+
+mysql> select JSON_ARRAY_VALUE('{"averageCpuLoad": [1.6,1.23,1.4,1.77]}', 'averageCpuLoad', 3);
++----------------------------------------------------------------------------------+
+| JSON_ARRAY_VALUE('{"averageCpuLoad": [1.6,1.23,1.4,1.77]}', 'averageCpuLoad', 3) |
++----------------------------------------------------------------------------------+
+| 1.4                                                                              |
++----------------------------------------------------------------------------------+
 1 row in set (0.00 sec)
 
-mysql> 
 ```
 
 
