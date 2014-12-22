@@ -1,7 +1,7 @@
 MySQL-JSON-utils
 ================
 
-Some functions for JSON parsing for SQL queries
+Some functions for JSON parsing for SQL queries. 
 Work with the simple JSON strings (without include json)
 
 
