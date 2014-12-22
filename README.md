@@ -16,10 +16,12 @@ $ mysql -u "user" -p "database" < uninstall.sql
 Get JSON value:
 ```
 
-mysql> SELECT  payload from history LIMIT 1;
+mysql> SELECT  payload from history LIMIT 3;
 ...
 [{"packetsTransmitted":4,"packetsReceived":4,"roundTripMinimal":14.356,"roundTripAverage":14.561,"roundTripMaximum":14.722}] 
-1 rows in set (0.00 sec)
+[{"packetsTransmitted":4,"packetsReceived":4,"roundTripMinimal":14.356,"roundTripAverage":14.643,"roundTripMaximum":14.722}] 
+[{"packetsTransmitted":4,"packetsReceived":4,"roundTripMinimal":14.356,"roundTripAverage":0.155,"roundTripMaximum":14.722}] 
+3 rows in set (0.00 sec)
 
 mysql> SELECT JSON_VALUE(payload, 'roundTripAverage') from history where link_id IS NOT NULL LIMIT 3;
 +-----------------------------------------+
